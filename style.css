@@ -1,0 +1,224 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Major Mono Display', monospace;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 1%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 6rem;
+    color: #456990;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.play__settings {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+}
+.play__settings {
+    justify-content: space-around;
+}
+.size__container {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+button:hover {
+    border: solid 1px #4569906b;
+}
+.button__play, .button__shuffle, .button__save-game,
+.button__result {
+    width: 140px;
+    height: 40px;
+    margin: 10px auto;
+    font-size: 1rem; 
+    text-transform: uppercase;
+    color:#456990;
+    border: solid 1px #456990;
+    border-radius: 5px;
+    background-color: #d2dce7;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.button__shuffle:disabled {
+    background-color: #4569906b;
+    border: solid 1px #4569906b;
+    color: #ffffff;
+    cursor: auto;
+}
+.button__size {
+    width: 64px;
+    height: 38px;
+    margin: 10px 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    background-color: #456990;
+    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+    cursor: pointer;
+}
+.button__size:disabled {
+    background-color: #4569906b;
+}
+.field {
+    background-color: #114B5F;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.field__3 {
+    width: 300px;
+    height: 300px;
+}
+.field__4 {
+    width: 400px;
+    height: 400px;
+}
+.field__5 {
+    width: 500px;
+    height: 500px;
+}
+.field__6 {
+    width: 600px;
+    height: 600px;
+}
+.field__7 {
+    width: 700px;
+    height: 700px;
+}
+.field__8 {
+    width: 800px;
+    height: 800px;
+}
+.cell__empty {
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transition:  all 0.5s;
+    cursor: pointer;
+}
+.cell {
+    box-sizing: border-box;
+    color: #ffffff;
+    background: #456990;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid #114B5F;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transition:  all 0.5s;
+    cursor: pointer;
+}
+.timer-step__container {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+}
+.timer__container {
+    display: flex;
+    gap: 4px;
+    align-items: baseline;
+}
+
+.steps__container {
+    display: flex;
+    gap: 4px;
+    align-items: baseline;
+}
+
+.minute__element,
+.second__element,
+.step__element {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 2rem;
+    color: #114B5F;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+.pop-up__container {
+    background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 7;
+	transition: background-color 1s ease;
+}
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+    .heading {
+        font-size: 3.6rem;
+    }
+    .button__size, .button__play, .button__shuffle,
+    .button__save-game {
+        width: 100px;
+        height: 30px;
+        font-size: 0.8rem; 
+    }
+    .timer-step__container {
+        flex-direction: column;
+        gap: 6px;
+    }
+    h4 {
+        font-size: 1.4rem;
+    }
+    .minute__element, .second__element, .step__element {
+        font-size: 1.2rem;
+    }
+    .field__3 {
+        width: 150px;
+        height: 150px;
+    }
+    .field__4 {
+        width: 200px;
+        height: 200px;
+    }
+    .field__5 {
+        width: 250px;
+        height: 250px;
+    }
+    .field__6 {
+        width: 300px;
+        height: 300px;
+    }
+    .field__7 {
+        width: 350px;
+        height: 350px;
+    }
+    .field__8 {
+        width: 400px;
+        height: 400px;
+    }
+    .cell {
+        width: 50px;
+        height: 50px;
+    }
+}
